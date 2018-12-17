@@ -51,6 +51,12 @@ public class LivingThing {
     }
 
 
+    /**
+     * 攻撃をするメソッド。
+     * 対象が死亡していなかったら攻撃力からランダムな値をダメージとして指定する。
+     * @param opponent 攻撃対象
+     */
+
     public void attack (LivingThing opponent){
         if( this.dead == false) {
             int damage = (int)(Math.random() * attack);
@@ -58,6 +64,7 @@ public class LivingThing {
             opponent.wounded(damage);
         }
     }
+
 
     /**
      * 自身へ攻撃されたときのダメージ処理をするメソッド。
